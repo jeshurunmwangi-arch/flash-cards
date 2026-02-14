@@ -1,0 +1,24 @@
+body {
+    background-color: #b4b4b4;
+}
+
+header {
+    color:#94A89A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.cards {
+    justify-content: center;
+    padding:50px 0;
+}
+
+.card {
+    background-color:#ffffff;
+   box-shadow: 0 0 10px #94A89A;
+   border-radius: 20px;
+   min-height: 250px;
+}

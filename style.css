@@ -1,4 +1,49 @@
- :root {
-   --background-color: #818188;
+body{
+    background-color: #b4b4b4;
+}
 
- }
+header {
+    color:#94A89A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+header nav {
+ /* margin-left: auto; */
+}
+
+
+
+.explanation {
+    text-align: center;
+    font-style: inherit;
+    margin-top: 100px;
+}
+
+.why{
+    text-align: center;
+    margin-top:100px;
+}
+
+.cards{
+    /* display: flex; */
+    /* gap: calc(30px); */
+    justify-content: center;
+    padding:50px 0;
+    /* margin-left:20%;
+    margin-top:200px; */
+}
+
+.card{
+   background-color:#ffffff;
+   box-shadow: 0 0 10px #94A89A;
+   border-radius: 20px;
+   min-height: 250px;
+}
+
+.card-body{
+   font-size: medium;
+}

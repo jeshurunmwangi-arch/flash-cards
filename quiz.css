@@ -1,0 +1,18 @@
+body {
+    background-color: #b4b4b4;
+}
+
+header {
+    color:#94A89A;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
+
+.form-body {
+    justify-content: center;
+    padding:50px 0;
+    border-radius:10px solid black ;
+}
