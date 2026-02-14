@@ -11,23 +11,32 @@
     <section class="header">
         <header>
             <h1>Start learning</h1>
-            <nav>
                 <button>
                     <a href="index.html">Home</a>
                 </button>
                 <button>
                     <a href="flash.html">About</a>
                 </button>
-            </nav>
         </header>
     </section>
 
     <hr>
 
-    <section class="form-body">
-        <form>
-            
-        </form>
+    <section class="form-container">
+        <form id="flashcardForm">
+  <h2>Create Flash Card</h2>
+
+  <label>Subject</label>
+  <input type="text" id="subject" required>
+
+  <label>Question</label>
+  <textarea id="question" required></textarea>
+
+  <label>Answer</label>
+  <textarea id="answer" required></textarea>
+
+  <button type="submit" onclick="handleAddQuestion()">Save Flash Card</button>
+</form>
     </section>
 
 
