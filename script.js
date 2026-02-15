@@ -54,3 +54,18 @@ function loadFlashCards(container) {
     });
 }
 
+const form = document.getElementById("submmit", function(e) {
+    e.preventDefault();
+
+    const subject = document.getElementById("subject").value;
+    const question = document.getElementById("question").value;
+    const answer = document.getElementById("answer").value;
+
+    const newcard = new FlashCard(subject, question, answer);
+
+    newcard.display(container);
+
+    saveToLocalStorage(newCard);
+
+    form.reset();
+});
