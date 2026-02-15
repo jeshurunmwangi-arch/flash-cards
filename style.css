@@ -2,6 +2,16 @@ body{
     background-color: #b4b4b4;
 }
 
+button {
+    background-color: #94A89A;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+
 header {
     color:#94A89A;
     text-align: center;
@@ -10,12 +20,6 @@ header {
     justify-content: space-between;
     margin: 20px 10px;
 }
-
-header nav {
- /* margin-left: auto; */
-}
-
-
 
 .explanation {
     text-align: center;
@@ -46,4 +50,10 @@ header nav {
 
 .card-body{
    font-size: medium;
+}
+
+footer {
+    background:#94A89A;
+    color: #fff;
+    padding:40px 20px 10px;
 }

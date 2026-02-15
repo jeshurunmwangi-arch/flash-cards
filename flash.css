@@ -2,6 +2,15 @@ body {
     background-color: #b4b4b4;
 }
 
+button {
+    background-color: #94A89A;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 header {
     color:#94A89A;
     text-align: center;
@@ -21,4 +30,11 @@ header {
    box-shadow: 0 0 10px #94A89A;
    border-radius: 20px;
    min-height: 250px;
+}
+
+
+footer {
+    background:#94A89A;
+    color: #fff;
+    padding:40px 20px 10px;
 }

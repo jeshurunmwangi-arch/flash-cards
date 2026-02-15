@@ -2,6 +2,16 @@ body {
     background-color: #b4b4b4;
 }
 
+button {
+    background-color: #94A89A;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+
 header {
     color:#94A89A;
     text-align: center;
@@ -11,8 +21,40 @@ header {
     margin: 20px 10px;
 }
 
-.form-body {
-    justify-content: center;
-    padding:50px 0;
-    border-radius:10px solid black ;
+.form-container {
+    text-align: center;
 }
+
+form {
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width:300px;
+    margin-left: 30%;
+}
+
+input, textarea {
+    width:100%;
+    padding: 8px;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+
+.submition {
+    width: 100%;
+    padding: 10px;
+    background:#94A89A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background:#94A89A;
+    color: #fff;
+    padding:40px 20px 10px;
+}
+
