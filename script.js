@@ -1,3 +1,37 @@
+
+function flashCard (subject,question,answer) {
+    this.subject = subject;
+    this.question = question;
+    this.answer = answer;
+}
+
+
+flashCard.prototype.display = function(container) {
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("flashcard");
+
+    cardDiv.innerHtml = `<h4>${this.subject} </h4>
+    <p class="answer" style="display:none;">${this.answer}</p>
+    <button class="toggleBtn">Show Answer</button>`;
+
+    const btn = cardDiv.querySelector(".toggleBtn");
+    const answerText = cardDiv.querySelector(".answer");
+
+    btn.addEventListener("click", function(){
+        if (answerText.computedStyleMap.display ==="none") {
+            answerText.computedStyleMap.display = "block";
+            btn.textContent = "Hide Answer";
+        } else {
+            answerText.computedStyleMap.display = "none";
+            btn.textContent = "Show Answer";
+        }
+
+    });
+
+    container.appendChild(cardDiv);
+};
+
+
 function saveToStorage(card) {
     let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
 
@@ -15,15 +49,8 @@ function loadFlashCards(container) {
             cardData.question,
             cardData.answer
         );
-    })
-}
 
-
-
-
-function flashCard (subject,question,answer) {
-    this.subject = subject;
-    this.question = question;
-    this.answer = answer;
+        card.display(container);
+    });
 }
 
