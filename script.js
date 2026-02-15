@@ -1,34 +1,40 @@
 
-function flashCard (subject,question,answer) {
+function FlashCard (subject,question,answer) {
     this.subject = subject;
     this.question = question;
     this.answer = answer;
 }
 
 
-flashCard.prototype.display = function(container) {
+
+FlashCard.prototype.display = function(container) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("flashcard");
-
-    cardDiv.innerHtml = `<h4>${this.subject} </h4>
+    
+    cardDiv.innerHTML = `<h4>${this.subject} </h4>
+    <p class="question">${this.question}</p>
     <p class="answer" style="display:none;">${this.answer}</p>
     <button class="toggleBtn">Show Answer</button>`;
 
+    const c = document.getElementById("flashcardContainer");
+c.appendChild(cardDiv);
+
     const btn = cardDiv.querySelector(".toggleBtn");
-    const answerText = cardDiv.querySelector(".answer");
+   
 
     btn.addEventListener("click", function(){
-        if (answerText.computedStyleMap.display ==="none") {
-            answerText.computedStyleMap.display = "block";
+        const answerText = cardDiv.querySelector(".answer");
+        if (answerText.style.display ==="none") {
+            answerText.style.display = "block";
             btn.textContent = "Hide Answer";
         } else {
-            answerText.computedStyleMap.display = "none";
+            answerText.style.display = "none";
             btn.textContent = "Show Answer";
         }
 
     });
 
-    container.appendChild(cardDiv);
+    
 };
 
 
@@ -54,7 +60,9 @@ function loadFlashCards(container) {
     });
 }
 
-const form = document.getElementById("submmit", function(e) {
+const container = document.getElementById("flashcardContainer");
+const form = document.getElementById("flashcardForm");
+form.addEventListener("submit", function(e) {
     e.preventDefault();
 
     const subject = document.getElementById("subject").value;
@@ -65,7 +73,13 @@ const form = document.getElementById("submmit", function(e) {
 
     newcard.display(container);
 
-    saveToLocalStorage(newCard);
+    saveToStorage(newcard);
 
     form.reset();
+})
+
+
+
+window.addEventListener("DOMContentLoaded", function() {
+  loadFlashCards(container);
 });

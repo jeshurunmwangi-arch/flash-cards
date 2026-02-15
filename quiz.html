@@ -23,7 +23,7 @@
   <h2>Create Flash Card</h2>
 
   <label>Subject</label>
-  <input type="text" id="subject" required>
+  <input type="text" id="subject" for="subject" required>
 
   <label>Question</label>
   <textarea id="question" required></textarea>
@@ -31,9 +31,12 @@
   <label>Answer</label>
   <textarea id="answer" required></textarea>
 
-  <button  class="submition"  type="submit" onclick="handleAddQuestion()">Save Flash Card</button>
+  <button  class="submition"  type="submit">Save Flash Card</button>
 </form>
     </section>
+    
+    <div id="flashcardContainer"></div>
+
 
     <hr>
 
