@@ -3,7 +3,7 @@ body {
 }
 
 button {
-    background-color: #94A89A;
+    background-color:rgb(149, 149, 201) ;
 }
 
 button a {
@@ -13,7 +13,7 @@ button a {
 
 
 header {
-    color:#94A89A;
+    color:rgb(149, 149, 201);
     text-align: center;
     display: flex;
     align-items: center;
@@ -21,24 +21,28 @@ header {
     margin: 20px 10px;
 }
 
+
+
 .form-container{
  display: flex;
  gap: 20px;
 }
 
 #flashcardForm {
-    /* flex:1; */
     width:400px;
+}
+
+#flashcardForm h2 {
+    color: rgb(149, 149, 201);
 }
 
 
 #flashcardContainer {
-    /* flex: 2; */
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    /* gap: 20px; */
 }
+
 #flashcardContainer > div{
     width: 33%;
 }
@@ -72,7 +76,7 @@ input, textarea {
 
 
 .flashcard {
-  background: white;
+  background:rgb(149, 149, 201);
   padding: 15px;
   margin: 15px;
   border-radius: 10px;
