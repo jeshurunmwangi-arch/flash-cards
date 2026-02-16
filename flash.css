@@ -3,7 +3,7 @@ body {
 }
 
 button {
-    background-color: #94A89A;
+    background-color: rgb(149, 149, 201);
 }
 
 button a {
@@ -12,7 +12,7 @@ button a {
 }
 
 header {
-    color:#94A89A;
+    color:rgb(149, 149, 201);
     text-align: center;
     display: flex;
     align-items: center;
@@ -31,7 +31,9 @@ header {
    border-radius: 20px;
    min-height: 250px;
 }
-
+.card-body h5 {
+    color: rgb(149, 149, 201);
+}
 
 footer {
     background:#94A89A;

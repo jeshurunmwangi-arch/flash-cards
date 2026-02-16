@@ -3,7 +3,7 @@ body{
 }
 
 button {
-    background-color: #94A89A;
+    background-color: rgb(149, 149, 201);
 }
 
 button a {
@@ -13,7 +13,7 @@ button a {
 
 
 header {
-    color:#94A89A;
+    color:rgb(149, 149, 201);
     text-align: center;
     display: flex;
     align-items: center;
@@ -32,13 +32,13 @@ header {
     margin-top:100px;
 }
 
+.why h2 {
+    color: rgb(149, 149, 201);
+}
+
 .cards{
-    /* display: flex; */
-    /* gap: calc(30px); */
     justify-content: center;
     padding:50px 0;
-    /* margin-left:20%;
-    margin-top:200px; */
 }
 
 .card{
@@ -52,8 +52,17 @@ header {
    font-size: medium;
 }
 
+.card-body h5{
+    color: rgb(149, 149, 201);
+}
+
 footer {
     background:#94A89A;
     color: #fff;
     padding:40px 20px 10px;
 }
+
+footer a {
+    gap: 2px;
+}
+
