@@ -106,3 +106,8 @@ footer {
     padding:40px 20px 10px;
 }
 
+@media (max-width:720px) {
+    .form-container{
+        flex-direction: column;
+    }   
+}
