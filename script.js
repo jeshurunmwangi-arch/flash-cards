@@ -36,17 +36,14 @@ c.appendChild(cardDiv);
 
     });
 
-    
-};
+const deleteBtn = cardDiv.querySelector(".deleteBtn");
 
-
-const btn = cardDiv.querySelector(".deleteBtn");
-
-btn.addEventListener("click", () => {
+deleteBtn.addEventListener("click", () => {
     deleteFromStorage(this);
     cardDiv.remove();
 })
 
+};
 
 function saveToStorage(card) {
     let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
