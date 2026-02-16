@@ -14,7 +14,9 @@ FlashCard.prototype.display = function(container) {
     cardDiv.innerHTML = `<h4>${this.subject} </h4>
     <p class="question">${this.question}</p>
     <p class="answer" style="display:none;">${this.answer}</p>
-    <button class="toggleBtn">Show Answer</button>`;
+    <button class="toggleBtn">Show Answer</button>
+    <button class="deleteBtn">Delete</button>
+    `;
 
     const c = document.getElementById("flashcardContainer");
 c.appendChild(cardDiv);
@@ -36,6 +38,14 @@ c.appendChild(cardDiv);
 
     
 };
+
+
+const btn = cardDiv.querySelector(".deleteBtn");
+
+btn.addEventListener("click", () => {
+    deleteFromStorage(this);
+    cardDiv.remove();
+})
 
 
 function saveToStorage(card) {
@@ -60,6 +70,20 @@ function loadFlashCards(container) {
     });
 }
 
+function deleteFromStorage(cardToDelete) {
+    let cards = JSON.parse(localStorage.getItem("flashcards")) || [];
+
+    cards = cards.filter(card =>
+        !(card.subject === cardToDelete.subject &&
+          card.question === cardToDelete.question && 
+        card.answer === cardToDelete.answer)
+    );
+
+    localStorage.setItem("flashcards", JSON.stringify(cards));
+}
+
+
+
 const container = document.getElementById("flashcardContainer");
 const form = document.getElementById("flashcardForm");
 form.addEventListener("submit", function(e) {
@@ -78,23 +102,9 @@ form.addEventListener("submit", function(e) {
     form.reset();
 })
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("delete-btn");
 
-        deleteBtn.addEventListener("click",function () {
 
-            let cards = JSON.parse(localStorage.getItems("flashcards")) || [];
 
-            cards.splice(index, 1);
-
-            localStorage.setItem("flashcards", JSON.stringify(cards));
-
-            loadFlashCards();
-        });
-
-        card.appendChild(deleteBtn);
-        container.appendChild(card);
 
 
 window.addEventListener("DOMContentLoaded", function() {
