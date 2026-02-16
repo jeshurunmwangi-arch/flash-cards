@@ -78,6 +78,23 @@ form.addEventListener("submit", function(e) {
     form.reset();
 })
 
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.classList.add("delete-btn");
+
+        deleteBtn.addEventListener("click",function () {
+
+            let cards = JSON.parse(localStorage.getItems("flashcards")) || [];
+
+            cards.splice(index, 1);
+
+            localStorage.setItem("flashcards", JSON.stringify(cards));
+
+            loadFlashCards();
+        });
+
+        card.appendChild(deleteBtn);
+        container.appendChild(card);
 
 
 window.addEventListener("DOMContentLoaded", function() {

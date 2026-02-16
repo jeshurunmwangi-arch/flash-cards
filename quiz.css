@@ -81,9 +81,30 @@ input, textarea {
   cursor: pointer;
 }
 
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
 footer {
     background:#94A89A;
     color: #fff;
     padding:40px 20px 10px;
 }
 
+@media {
+    body {
+        font-size:18px;
+    }
+
+    .form-container {
+        display:flex;
+        flex-direction: column;
+        padding:10px;
+    }   
+}
