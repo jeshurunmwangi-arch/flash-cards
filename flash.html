@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About flash-cards</title>
-    <link rel="stylesheet" href="flash.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works – Flash Cards</title>
+  <meta name="description" content="Learn how to use Flash Cards in 3 simple steps to memorise content faster and study smarter.">
+  <link rel="canonical" href="https://jeshurunmwangi-arch.github.io/flash-cards/flash.html">
+  <meta property="og:title" content="How It Works – Flash Cards">
+  <meta property="og:description" content="Get started in 3 simple steps and master any subject with flash cards.">
+  <meta property="og:url" content="https://jeshurunmwangi-arch.github.io/flash-cards/flash.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="header">
-    <header>
-        <h1>How It Works</h1>
-        <nav class="button">
-            <button class="learn"><a href="quiz.html">learn</a></button>
-            <button class="learn"><a href="index.html">Home</a></button>
 
-        </nav>
-    </header>
+  <div class="bg-grid"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span>FlashCards</span>
+      </a>
+      <nav class="main-nav">
+        <a href="flash.html" class="nav-link active">How It Works</a>
+        <a href="quiz.html" class="btn-primary">Start Learning →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-eyebrow">Simple by design</div>
+      <h1 class="hero-title">Get Started in <span class="accent">3 Steps</span></h1>
+      <p class="hero-sub">No sign-up required. Create your first flash card in under a minute.</p>
     </section>
 
-        <hr>
+    <section class="steps-section">
+      <div class="steps-grid">
 
+        <div class="step-card" style="--delay:0s">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Create a Card</h3>
+            <p>Pick a subject you're learning and write a question about something you want to remember. Keep it focused — one concept per card works best.</p>
+          </div>
+          <div class="step-icon">✏️</div>
+        </div>
 
-    
-                <p>Get started in 3 steps</p>
-        <section class="Cards  d-flex flex-column flex-md-row gap-4 p-4 justify-content-md-center">
-                <div class="card w-100 mb-3 w-md-25">
-  <div class="card-body">
-        <h5 class="card-title">1.  Create a Card</h5>
-        <p class="card-text"> create a card about the subject you are learning with the question about what you don't understand.</p> 
-    
-   </div>
-   </div>
-            
-        
+        <div class="step-connector"></div>
 
-        
-              <div class="card w-100 mb-3 w-md-25">
-  <div class="card-body">
-        <h5 class="card-title">2.  Create a Card</h5>
-        <p class="card-text"> study smart and try to remember what you read and answer the questions.</p>
-   </div>
-   </div>
+        <div class="step-card" style="--delay:0.15s">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Study & Recall</h3>
+            <p>Go through your cards and try to answer each question from memory before flipping to check. This active recall is what makes flash cards so effective.</p>
+          </div>
+          <div class="step-icon">🧠</div>
+        </div>
 
-           
-              <div class="card w-100 mb-3 w-md-25">
-  <div class="card-body">
-        <h5 class="card-title">3.  Create a Card</h5>
-        <p class="card-text"> create a card about the subject you are learning with the question about what you don't understand.</p>
-   </div>
-</section>
+        <div class="step-connector"></div>
 
-    <hr>
+        <div class="step-card" style="--delay:0.3s">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Review & Repeat</h3>
+            <p>Keep studying until you've mastered every card. Delete ones you know, keep the ones you're still working on, and build up your deck over time.</p>
+          </div>
+          <div class="step-icon">🔁</div>
+        </div>
 
- <section class="footer"> 
-        <footer>
-            <p>© 2026 flash card application</p>
-            <a href="https://wa.link/cd3acs">Whatsapp</a>
-            <a href="">Linkedin</a>
-        </footer>
-      </section>
-                
+      </div>
 
-    
+      <div class="steps-cta">
+        <p>Ready to put it into practice?</p>
+        <a href="quiz.html" class="btn-primary btn-lg">Create Your First Card →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span>FlashCards</span>
+        </a>
+        <p>Study smarter, not harder.</p>
+      </div>
+      <div class="footer-links">
+        <a href="flash.html">How It Works</a>
+        <a href="quiz.html">Create Cards</a>
+        <a href="https://wa.link/cd3acs" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Flash Card Application. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,59 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flash-card quizes</title>
-    <link rel="stylesheet" href="quiz.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <section class="header">
-      <header>
-        <h1>Start learning</h1>
-        <button><a href="index.html">Home</a></button>
-        <button><a href="flash.html">About</a></button>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Flash Cards – Start Learning</title>
+  <meta name="description" content="Create and save your own flash cards to study any subject. Cards are saved locally so you can study anytime.">
+  <link rel="canonical" href="https://jeshurunmwangi-arch.github.io/flash-cards/quiz.html">
+  <meta property="og:title" content="Create Flash Cards – Start Learning">
+  <meta property="og:description" content="Create and save your own flash cards to study any subject.">
+  <meta property="og:url" content="https://jeshurunmwangi-arch.github.io/flash-cards/quiz.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⬡</span>
+        <span>FlashCards</span>
+      </a>
+      <nav class="main-nav">
+        <a href="flash.html" class="nav-link">How It Works</a>
+        <a href="quiz.html" class="btn-primary active">Start Learning →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-eyebrow">Your study space</div>
+      <h1 class="hero-title">Create <span class="accent">Flash Cards</span></h1>
+      <p class="hero-sub">Add a subject, write your question and answer, then save. Your cards are stored locally and persist after refresh.</p>
     </section>
 
-    <hr />
+    <section class="quiz-section">
+      <div class="quiz-layout">
 
-    <section class="form-container">
-      <form id="flashcardForm">
-        <h2>Create Flash Card</h2>
+        <!-- Create card form -->
+        <div class="create-panel">
+          <h2 class="panel-title">New Card</h2>
 
-        <label>Subject</label>
-        <input type="text" id="subject" for="subject" required />
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="e.g. Biology, French, History…">
+          </div>
 
-        <label>Question</label>
-        <textarea id="question" required></textarea>
+          <div class="form-group">
+            <label for="question">Question</label>
+            <textarea id="question" rows="3" placeholder="What do you want to remember?"></textarea>
+          </div>
 
-        <label>Answer</label>
-        <textarea id="answer" required></textarea>
+          <div class="form-group">
+            <label for="answer">Answer</label>
+            <textarea id="answer" rows="3" placeholder="The answer to your question…"></textarea>
+          </div>
 
-        <button class="submition" type="submit">Save Flash Card</button>
-      </form>
+          <button class="btn-primary btn-lg btn-full" id="saveBtn">Save Flash Card</button>
+        </div>
 
-       <div id="flashcardContainer"></div>
+        <!-- Cards display -->
+        <div class="cards-panel">
+          <h2 class="panel-title">Your Cards <span class="card-count" id="cardCount">0</span></h2>
+          <div class="cards-list" id="cardsList">
+            <div class="empty-state">
+              <span class="empty-icon">🃏</span>
+              <p>No cards yet. Create your first one!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
+  </main>
 
-   
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">⬡</span>
+          <span>FlashCards</span>
+        </a>
+        <p>Study smarter, not harder.</p>
+      </div>
+      <div class="footer-links">
+        <a href="flash.html">How It Works</a>
+        <a href="quiz.html">Create Cards</a>
+        <a href="https://wa.link/cd3acs" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Flash Card Application. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <hr />
-
-    <section class="footer">
-      <footer>
-        <p>© 2026 flash card application</p>
-        <a href="https://wa.link/cd3acs">Whatsapp</a>
-        <a href="">Linkedin</a>
-      </footer>
-    </section>
-
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js" defer></script>
+</body>
 </html>
